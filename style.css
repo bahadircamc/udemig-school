@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*font-family: "Poppins", sans-serif;
+ font-family: "Roboto", sans-serif;*/
+
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+}
+.body{
+    font-family: "Poppins", sans-serif
+}
+
+.h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+.align-box{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 1px;
+}
+
+.align-col{
+    flex-basis: 30%;/* css te kullanilan ve ogenin baslangic genisligine ve yuksekligini belirlemeye yarar */
+    margin-bottom: 5%;
+    box-sizing: border-box;/*elemanlarin kapsayicin disari tasmasini engelleyen yapi */
+    border-radius: 5%;
+}
+/* header Css */
+
+.header{
+    background-color: black;
+    min-height: 100vh;
+    /* min-height min yukseklik belirlemek icin kullanilir, vh ise acilir pencerenin 100% demektir */
+    background: linear-gradient(rgba(5, 10, 30, 0.7), rgba(5, 10, 30, 0.7)),
+    url("./bg.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+.nav a img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    /* flex 1 ile elemanin kalan alani almasini sagladik */
+
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    /* elemanlari ayni satir icine getirip block eleman ozelliginde kullanmaya yarar */
+    float: right;
+    padding: 8px 12px;
+
+}
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+.nav-links ul li a::after {
+    content: "";
+    background-color: red;
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 4px;
+}
+.nav-links ul li a:hover::after {
+    width: 100%;
+    transition: 0.3s;
+    
+}
+.menu {
+    color: rgb(255, 255, 255);
+    display: none;
+    font-size: 30px;
+    
+}
+/*texy box kismi*/
+
+.text-box {
+    
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+.text-box h1 {
+    
+    font-size: 60px;
+
+}
+.text-box p {
+    margin: 10px 0;
+    font-size: 10 px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.hero-btn:hover{
+    background-color: red;
+    border-color: white;
+    
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    background-color: antiquewhite;
+    padding: 20px 10px;
+    transition: all 0.3s;
+}
+.course-col:hover{
+    box-shadow: 0 0 10px gray;
+    transition: all 0.3s;
+}
+
+/* campus alani */
+.campus-col{
+    position: relative;
+    overflow: hidden; /* tasmalari engeller*/
+    background-color: aqua;
+}
+.campus-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+}
+.layer:hover {
+    background-color: rgba(200, 52, 15, 0.5);
+}
+.layer h3 {
+    font-size: 500;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+/*facilities alani*/
+
+.facilities-col{
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    
+}
+.facilities-col img{
+    width: 100%;
+}
+/*yorumlar alni*/
+
+.testemonials-col{
+    background-color: antiquewhite;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.testemonials-col img{
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 50%;
+
+}
+.testemonials-col div p{
+    padding: 0;
+}
+.testemonials-col  h2 {
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+.testemonials-col div .bi {
+    color: red;
+}
+/*contec alani*/
+.ua {
+    background: linear-gradient(rgba(14, 26, 71, 0.7));
+    background-position: center;
+    background-size: cover;
+    padding: 100px o;
+    color: black;
+    margin: 50px auto;
+    border-radius: 10px;
+} 
+.ua h1{
+    margin-bottom: 40px;
+    padding: 0;
+}
+/*footer alani*/
+.footer{
+    padding: 30px 0;
+}
+.footer h1 {
+    margin: 0 0 25px 0;
+}
+.icons{
+    margin: 10px;
+}
+.icons .bi{
+    color: red;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 20px 10px;
+
+}
+/*responsive tasarim*/
+@media (max-width: 768px){
+    .nav-links {
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .row{
+        display: block;
+        
+    }
+    .text-box h1{
+        font-size: 30px;
+    }
+    .ua h1 {
+        font-size: 25px;
+    }
+}
